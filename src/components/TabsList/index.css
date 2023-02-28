@@ -1,0 +1,14 @@
+.list-tab {
+  list-style-type: none;
+}
+
+.button-tab {
+  background-color: transparent;
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 20px;
+  font-family: 'Roboto';
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
