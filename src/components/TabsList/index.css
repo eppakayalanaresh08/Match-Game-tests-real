@@ -12,3 +12,8 @@
   cursor: pointer;
   outline: none;
 }
+
+.tab-style {
+  border-bottom: 2px solid #fec653;
+  color: #fec653;
+}

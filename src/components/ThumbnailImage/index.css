@@ -1,5 +1,11 @@
 .thumbnail-image {
-  height: 130px;
+  height: 73px;
+}
+
+@media screen and (min-width: 768px) {
+  .thumbnail-image {
+    height: 130px;
+  }
 }
 
 .button-thumbnail {

@@ -259,23 +259,11 @@ class MatchGameApp extends Component {
     gameIsOver: false,
     points: 0,
     randomImage: imagesList[0],
-    // Math.ceil(Math.random() * imagesList.length - 1),
   }
 
   componentDidMount() {
     this.timerID = setInterval(this.tick, 1000)
   }
-
-  //   componentWillUnmount() {
-  //     clearInterval(this.timerID)
-  //     const {time} = this.state
-  //     if (time === 0) {
-  //       this.setState(prevState => ({gameIsOver: !prevState.gameIsOver}))
-  //     }
-  //   }
-  //   componentWillUnmount() {
-  //     clearInterval(this.timerID)
-  //   }
 
   onClickRestButton = () => {
     this.setState({
@@ -295,7 +283,6 @@ class MatchGameApp extends Component {
       this.setState({
         ListTabImage: tabsList[0].tabId,
         time: 60,
-        points: 0,
         randomImage: imagesList[0],
       })
     } else {
@@ -323,7 +310,7 @@ class MatchGameApp extends Component {
     } else {
       this.setState(prevState => ({gameIsOver: !prevState.gameIsOver}))
     }
-    const random = Math.floor(Math.random() * imagesList.length - 1)
+    const random = Math.floor(Math.random() * imagesList.length)
 
     this.setState({
       randomImage: imagesList[random],
@@ -342,7 +329,6 @@ class MatchGameApp extends Component {
             alt="website logo"
             className="image-logo"
           />
-
           <ul className="score-container">
             <li className="list-score-items">
               <p className="score-Element">
@@ -396,6 +382,7 @@ class MatchGameApp extends Component {
                     eachItemTab={eachTab}
                     onClickNamesItems={this.onClickNamesItems}
                     key={eachTab.tabId}
+                    isActive={ListTabImage === eachTab.tabId}
                   />
                 ))}
               </ul>

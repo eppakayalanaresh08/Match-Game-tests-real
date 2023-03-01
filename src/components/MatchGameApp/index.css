@@ -11,12 +11,28 @@
   background-color: #2c0e3a;
   display: flex;
   width: 100%;
-  justify-content: space-between;
   align-items: center;
 }
 
+@media screen and (min-width: 768px) {
+  .card-game-bg-container {
+    background-color: #2c0e3a;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
 .image-logo {
-  width: 300px;
+  width: 150px;
+  margin-left: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .image-logo {
+    width: 300px;
+  }
 }
 
 .list-score-items {
@@ -59,16 +75,14 @@
   justify-content: space-around;
 }
 
-.container-game {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 70%;
+.images-Game {
+  width: 90%;
 }
 
-.images-Game {
-  width: 600px;
+@media screen and (min-width: 768px) {
+  .images-Game {
+    width: 600px;
+  }
 }
 
 .container-ThumbnailImage {
@@ -77,24 +91,55 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  width: 63%;
+  width: 100%;
+  padding-left: 0px;
+}
+
+@media screen and (min-width: 768px) {
+  .container-ThumbnailImage {
+    width: 63%;
+  }
+}
+
+.container-game {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .container-game {
+    width: 70%;
+  }
 }
 
 .container-game-over {
   display: flex;
   flex-direction: column;
-  background-image: url('https://assets.ccbp.in/frontend/react-js/match-game-score-card-lg-bg.png');
-  min-height: 80vh;
+  background-image: url('https://assets.ccbp.in/frontend/react-js/match-game-score-card-sm-bg.png');
+  height: 65vh;
   background-size: cover;
   justify-content: center;
   align-items: center;
-  width: 45%;
+  width: 90%;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .container-game-over {
+    background-image: url('https://assets.ccbp.in/frontend/react-js/match-game-score-card-lg-bg.png');
+    width: 45%;
+    height: 75vh;
+  }
 }
 
 .trophy-Element {
   height: 250px;
   padding-top: 70px;
-  margin-top: 20px;
+  margin-top: 40px;
 }
 
 .Your-Score-game-over {
